@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Random;
 import java.util.logging.Logger;
 
+/**
+ * Clase que representa la carcel
+ * @author Erick Arroyo
+ * @version 1.0
+ */
 public class Carcel {
     private List<Prisionero> celdas;
     private Habitacion habitacion;
