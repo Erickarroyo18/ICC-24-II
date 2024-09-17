@@ -1,0 +1,361 @@
+[
+    {
+        "label": "__init__",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "__init__",
+        "description": "__init__",
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "Github",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "pytz",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "openpyxl",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "importPath": "__init__",
+        "description": "__init__",
+        "isExtraImport": true,
+        "detail": "__init__",
+        "documentation": {}
+    },
+    {
+        "label": "ORG_NAME",
+        "importPath": "model.constants",
+        "description": "model.constants",
+        "isExtraImport": true,
+        "detail": "model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "ASSIGNMENT_PREFIX",
+        "importPath": "model.constants",
+        "description": "model.constants",
+        "isExtraImport": true,
+        "detail": "model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "START_DATE",
+        "importPath": "model.constants",
+        "description": "model.constants",
+        "isExtraImport": true,
+        "detail": "model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "SPECIAL_USERS",
+        "importPath": "model.constants",
+        "description": "model.constants",
+        "isExtraImport": true,
+        "detail": "model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGER",
+        "importPath": "model.constants",
+        "description": "model.constants",
+        "isExtraImport": true,
+        "detail": "model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "GITHUIB_USERS",
+        "importPath": "model.constants",
+        "description": "model.constants",
+        "isExtraImport": true,
+        "detail": "model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_FILE",
+        "importPath": "model.constants",
+        "description": "model.constants",
+        "isExtraImport": true,
+        "detail": "model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_DIR",
+        "importPath": "model.constants",
+        "description": "model.constants",
+        "isExtraImport": true,
+        "detail": "model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_date",
+        "importPath": "control.controller",
+        "description": "control.controller",
+        "isExtraImport": true,
+        "detail": "control.controller",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "importPath": "model.loader",
+        "description": "model.loader",
+        "isExtraImport": true,
+        "detail": "model.loader",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate_connect",
+        "kind": 2,
+        "importPath": "src.control.controller",
+        "description": "src.control.controller",
+        "peekOfCode": "def authenticate_connect():\n    \"\"\"\n    Authenticate to Github\n    Raises:\n        ValueError: If the token is not found\n    Returns:\n        user_login: user authenticated\n    \"\"\"\n    try:\n        token = os.getenv('GIT_TOKEN')",
+        "detail": "src.control.controller",
+        "documentation": {}
+    },
+    {
+        "label": "get_org",
+        "kind": 2,
+        "importPath": "src.control.controller",
+        "description": "src.control.controller",
+        "peekOfCode": "def get_org(g : Github):\n    \"\"\"\n    Get the organization from Github\n    Args:\n        g (Github): user authenticated\n    Returns:\n        org: connection to the organization\n    \"\"\"\n    try:\n        # get the organization",
+        "detail": "src.control.controller",
+        "documentation": {}
+    },
+    {
+        "label": "get_repos_from_org",
+        "kind": 2,
+        "importPath": "src.control.controller",
+        "description": "src.control.controller",
+        "peekOfCode": "def get_repos_from_org(org, prefix= None, start_date= None):\n    \"\"\"\n    Get the repositories from the organization, can filter by prefix and start date\n    Args:\n        org (org): Organization connection\n        prefix (str, optional): filter prefix . Defaults to None.\n        start_date (datetime, optional): from to date. Defaults to None.\n    Returns:\n        paginatedList: list of repositories\n    \"\"\"",
+        "detail": "src.control.controller",
+        "documentation": {}
+    },
+    {
+        "label": "get_last_commit_date",
+        "kind": 2,
+        "importPath": "src.control.controller",
+        "description": "src.control.controller",
+        "peekOfCode": "def get_last_commit_date(repos):\n    \"\"\"\n    Get the last commit date of the repositories\n    Args:\n        repos (paginatedList): List of repositories\n    Returns:\n        dicc: Constains the data of the form {name: date} of the last commits of the assignments\n    \"\"\"\n    dicc = {}\n    for repo in repos:",
+        "detail": "src.control.controller",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_date",
+        "kind": 2,
+        "importPath": "src.control.controller",
+        "description": "src.control.controller",
+        "peekOfCode": "def get_user_date():\n    \"\"\"\n    Load the dictionary that contains the data of the form {name: date} of the \n    commits of the assignments\n    Returns:\n        dicc: dicc with the data of the form {name: date} \n    \"\"\"\n    g = authenticate_connect()\n    org = get_org(g)\n    repos = get_repos_from_org(org, prefix= ASSIGNMENT_PREFIX, start_date= START_DATE)",
+        "detail": "src.control.controller",
+        "documentation": {}
+    },
+    {
+        "label": "get_git_user",
+        "kind": 2,
+        "importPath": "src.control.controller",
+        "description": "src.control.controller",
+        "peekOfCode": "def get_git_user(commit, repo_name):\n    \"\"\"\n    Get the user from the commit\n    Args:\n        commit (PaginatedList): list of commits\n        repo_name (str): repo name of a assignment \n    Returns:\n        _type_: _description_\n    \"\"\"\n    try:",
+        "detail": "src.control.controller",
+        "documentation": {}
+    },
+    {
+        "label": "special_case",
+        "kind": 2,
+        "importPath": "src.control.controller",
+        "description": "src.control.controller",
+        "peekOfCode": "def special_case(case):\n    \"\"\"\n    Check if the repo name is a special case\n    Args:\n        case (str): have the form repo_prefix-user\n    Returns:\n        str: equivalent user in the SPECIAL_USERS list\n    \"\"\"\n    for sc in SPECIAL_USERS:\n        if sc in case:",
+        "detail": "src.control.controller",
+        "documentation": {}
+    },
+    {
+        "label": "ORG_NAME",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "ORG_NAME = 'cc-icc'\n# Assignment prefix\nASSIGNMENT_PREFIX = 'practica-4-programacion-estructurada'\n# Start date\ntimezone = pytz.timezone(\"UTC\")\nSTART_DATE_NATIVE = datetime.strptime('2024-09-03', \"%Y-%m-%d\")\nSTART_DATE = timezone.localize(START_DATE_NATIVE)   \n# Output file\nOUTPUT_DIR = 'output'\nOUTPUT_FILE = 'icc_p4.xlsx'",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "ASSIGNMENT_PREFIX",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "ASSIGNMENT_PREFIX = 'practica-4-programacion-estructurada'\n# Start date\ntimezone = pytz.timezone(\"UTC\")\nSTART_DATE_NATIVE = datetime.strptime('2024-09-03', \"%Y-%m-%d\")\nSTART_DATE = timezone.localize(START_DATE_NATIVE)   \n# Output file\nOUTPUT_DIR = 'output'\nOUTPUT_FILE = 'icc_p4.xlsx'\nLOGGER = True  # Cambiar a False para deshabilitar la impresión\n# llave = nombre del estudiante, valor = usuario de github",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "timezone = pytz.timezone(\"UTC\")\nSTART_DATE_NATIVE = datetime.strptime('2024-09-03', \"%Y-%m-%d\")\nSTART_DATE = timezone.localize(START_DATE_NATIVE)   \n# Output file\nOUTPUT_DIR = 'output'\nOUTPUT_FILE = 'icc_p4.xlsx'\nLOGGER = True  # Cambiar a False para deshabilitar la impresión\n# llave = nombre del estudiante, valor = usuario de github\nGITHUIB_USERS = {\n\"aguilarvillegasalejandrosaid\" : \"AlejandroAguilar2002\",",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "START_DATE_NATIVE",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "START_DATE_NATIVE = datetime.strptime('2024-09-03', \"%Y-%m-%d\")\nSTART_DATE = timezone.localize(START_DATE_NATIVE)   \n# Output file\nOUTPUT_DIR = 'output'\nOUTPUT_FILE = 'icc_p4.xlsx'\nLOGGER = True  # Cambiar a False para deshabilitar la impresión\n# llave = nombre del estudiante, valor = usuario de github\nGITHUIB_USERS = {\n\"aguilarvillegasalejandrosaid\" : \"AlejandroAguilar2002\",\n\"aguirreconsuegrasergiodaniel\" : \"DanielUnam09\",",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "START_DATE",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "START_DATE = timezone.localize(START_DATE_NATIVE)   \n# Output file\nOUTPUT_DIR = 'output'\nOUTPUT_FILE = 'icc_p4.xlsx'\nLOGGER = True  # Cambiar a False para deshabilitar la impresión\n# llave = nombre del estudiante, valor = usuario de github\nGITHUIB_USERS = {\n\"aguilarvillegasalejandrosaid\" : \"AlejandroAguilar2002\",\n\"aguirreconsuegrasergiodaniel\" : \"DanielUnam09\",\n\"barrerareyesgael\" : None,",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_DIR",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "OUTPUT_DIR = 'output'\nOUTPUT_FILE = 'icc_p4.xlsx'\nLOGGER = True  # Cambiar a False para deshabilitar la impresión\n# llave = nombre del estudiante, valor = usuario de github\nGITHUIB_USERS = {\n\"aguilarvillegasalejandrosaid\" : \"AlejandroAguilar2002\",\n\"aguirreconsuegrasergiodaniel\" : \"DanielUnam09\",\n\"barrerareyesgael\" : None,\n\"becerravalenciacesar\" : \"BecVal\",\n\"cisnerosalvarezdanjiro\" : \"DanjiroCis\",",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "OUTPUT_FILE",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "OUTPUT_FILE = 'icc_p4.xlsx'\nLOGGER = True  # Cambiar a False para deshabilitar la impresión\n# llave = nombre del estudiante, valor = usuario de github\nGITHUIB_USERS = {\n\"aguilarvillegasalejandrosaid\" : \"AlejandroAguilar2002\",\n\"aguirreconsuegrasergiodaniel\" : \"DanielUnam09\",\n\"barrerareyesgael\" : None,\n\"becerravalenciacesar\" : \"BecVal\",\n\"cisnerosalvarezdanjiro\" : \"DanjiroCis\",\n\"cortesnavajoseluis\" : \"luuisjnc\",",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGER",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "LOGGER = True  # Cambiar a False para deshabilitar la impresión\n# llave = nombre del estudiante, valor = usuario de github\nGITHUIB_USERS = {\n\"aguilarvillegasalejandrosaid\" : \"AlejandroAguilar2002\",\n\"aguirreconsuegrasergiodaniel\" : \"DanielUnam09\",\n\"barrerareyesgael\" : None,\n\"becerravalenciacesar\" : \"BecVal\",\n\"cisnerosalvarezdanjiro\" : \"DanjiroCis\",\n\"cortesnavajoseluis\" : \"luuisjnc\",\n\"diazaguilaromar\" : \"Tao0Tao00\",",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "GITHUIB_USERS",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "GITHUIB_USERS = {\n\"aguilarvillegasalejandrosaid\" : \"AlejandroAguilar2002\",\n\"aguirreconsuegrasergiodaniel\" : \"DanielUnam09\",\n\"barrerareyesgael\" : None,\n\"becerravalenciacesar\" : \"BecVal\",\n\"cisnerosalvarezdanjiro\" : \"DanjiroCis\",\n\"cortesnavajoseluis\" : \"luuisjnc\",\n\"diazaguilaromar\" : \"Tao0Tao00\",\n\"diazanaviajavieromar\" : \"JavierDx139\",\n\"espejelbaezjuanarturo\" : \"ThrinkEsBa\",",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "SPECIAL_USERS",
+        "kind": 5,
+        "importPath": "src.model.constants",
+        "description": "src.model.constants",
+        "peekOfCode": "SPECIAL_USERS = ['LeoDan17-01', 'DanielUnam09']",
+        "detail": "src.model.constants",
+        "documentation": {}
+    },
+    {
+        "label": "save_to_file",
+        "kind": 2,
+        "importPath": "src.model.loader",
+        "description": "src.model.loader",
+        "peekOfCode": "def save_to_file(dicc, file_name, title = \"ICC 2025-I\"):\n    \"\"\"\n    Save the dictionary to an Excel file.\n    Args:\n        dicc (dic): contains the data of the form {name: date}\n        file_name (str): file name\n        title (str, optional): title of the sheet. Defaults to \"ICC 2025-I\".\n    \"\"\"\n    wb = openpyxl.Workbook()\n    ws = wb.active",
+        "detail": "src.model.loader",
+        "documentation": {}
+    },
+    {
+        "label": "load_file",
+        "kind": 2,
+        "importPath": "src.model.loader",
+        "description": "src.model.loader",
+        "peekOfCode": "def load_file(dicc):\n    \"\"\"\n    Load the dictionary \n    Args:\n        dicc (dicc): Contains the data of the form {name: date} of the \n        assignments\n    Returns:\n        dicc: A dictionary with the data of the form {name: date} of the\n        assignments, ready to save in an Excel file\n    \"\"\"",
+        "detail": "src.model.loader",
+        "documentation": {}
+    },
+    {
+        "label": "parser_date",
+        "kind": 2,
+        "importPath": "src.model.loader",
+        "description": "src.model.loader",
+        "peekOfCode": "def parser_date(date):\n    \"\"\"\n    Transform the date to the format \"YYYY-MM-DD\"\n    Args:\n        date (datetime): date of the last commit\n    Returns:\n        str: date in the format \"YYYY-MM-DD\"\n    \"\"\"\n    if date is None:\n        return ''",
+        "detail": "src.model.loader",
+        "documentation": {}
+    },
+    {
+        "label": "load",
+        "kind": 2,
+        "importPath": "src.model.loader",
+        "description": "src.model.loader",
+        "peekOfCode": "def load(dicc):\n    \"\"\"\n    Load the dictionary and save it in an Excel file\n    Args:\n        dicc (dicc): dicc with the data of the form {name: date} of the\n        assignments\n    \"\"\"\n    dicc=load_file(dicc)\n    # contcatenate the path\n    save_to_file(dicc,  OUTPUT_FILE)",
+        "detail": "src.model.loader",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def main():\n    dicc = get_user_date()\n    #print(len(dicc))\n    #for k,v in dicc.items():\n    #    print(f\"{k} - {v}\")\n    load(dicc)\nif __name__ == \"__main__\":\n    main()",
+        "detail": "src.main",
+        "documentation": {}
+    }
+]
